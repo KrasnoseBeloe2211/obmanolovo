@@ -2,11 +2,24 @@ import scam from './imgs/scam-peepoo-scam.gif'
 import money from './imgs/money.gif'
 import bin from './imgs/bin.png'
 import './App.css'
+import { useState } from 'react'
 
 function App() {
+	const [window, setWindow] = useState('menu')
+
+	function OpenMenu() {
+		setWindow('menu active')
+	}
+
 	return (
 		<div className='App'>
 			<div className='container'>
+				<div className={window}>
+					<h1>ПОТРАЧЕНО</h1>
+					<h3>
+						<b className='dot'>P.S.</b> оставшийся день на крошке хлеба
+					</h3>
+				</div>
 				<div className='header'>
 					<img src={scam} alt='' />
 					<h1 className='logo'>
@@ -36,11 +49,11 @@ function App() {
 								СОГЛАСЕН<b className='com'>?</b>
 							</h3>
 							<label className='checkbox'>
-								<input type='checkbox' />
+								<input onClick={OpenMenu} type='checkbox' />
 								<span class='checkmark'></span>
 							</label>
 						</div>
-						<img className='bean' src={bin} alt=''/>
+						<img className='bean' src={bin} alt='' />
 					</div>
 				</div>
 			</div>
