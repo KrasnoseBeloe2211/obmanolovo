@@ -1,13 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kaushan+Script&family=M+PLUS+Rounded+1c&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: 'Exo 2', sans-serif;
+	margin: 0;
+	background-color: #303030;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+	max-width: 746px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  margin: auto;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	font-size: 26px;
+	color: #fff;
+}
+
+.dot {
+	color: chartreuse;
+}
+
+.com {
+	color: #ff0000;
+}
+
+.money {
+	width: 50px;
+}
+
+.header img {
+	width: 40px;
+}
+
+.halyava {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 60px;
+	margin-bottom: 0;
+	background: linear-gradient(90deg, #ff0000, #00fc15, #0d00ff, #ff0000);
+	background-size: 300% 300%;
+	animation: gradientMove 1.2s infinite linear;
+	-webkit-background-clip: text; /* для Chrome, Safari */
+	-webkit-text-fill-color: transparent; /* делаем текст прозрачным */
+	background-clip: text; /* для Firefox */
+}
+
+@keyframes gradientMove {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+
+.agree {
+	font-size: 36px;
+	color: #fff;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.input_agree {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.checkbox input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Контейнер */
+.checkbox {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+.rollton {
+  color: #ffaa00;
+}
+
+/* Стилизованный квадратик */
+.checkmark {
+	width: 40px;
+	height: 40px;
+	border: 2px solid #ff00c3;
+	background-color: #6a0d54;
+	margin-left: 10px;
+	border-radius: 4px; /* можно сделать круглый: 50% */
+	margin-right: 8px;
+	transition: all 0.1s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* При наведении */
+.checkbox:hover .checkmark {
+	border-color: #ffffff;
+}
+
+/* Галочка */
+.checkmark::after {
+	content: '';
+	width: 6px;
+	height: 12px;
+	border: solid white;
+	border-width: 0 4px 4px 0;
+	transform: rotate(45deg);
+	display: none;
+}
+
+/* Когда чекбокс активен */
+.checkbox input:checked + .checkmark {
+	background-color: #00cd37;
+	border-color: #00ad06;
+	border-radius: 100%;
+}
+
+.checkbox input:checked + .checkmark::after {
+	display: block;
+}
+
+.text {
+	background-color: blueviolet;
+	display: flex;
+	color: #fff;
+	padding: 40px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	max-width: 600px;
+	border-radius: 30px 100px;
+}
+
+.text p {
+	font-weight: 600;
+	font-size: 25px;
+}
+
+.bean {
+	border-radius: 100px;
+}
+
+.free_monet_sec {
+	background-color: #0059ff;
+	border-radius: 100px;
+	margin-top: 10px;
 }
