@@ -12,7 +12,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-  margin: auto;
+	margin: auto;
 }
 
 .header {
@@ -49,7 +49,7 @@ body {
 	margin-bottom: 0;
 	background: linear-gradient(90deg, #ff0000, #00fc15, #0d00ff, #ff0000);
 	background-size: 300% 300%;
-	animation: gradientMove 1.2s ease-in-out infinite linear;
+	animation: gradientMove 1.2s infinite linear;
 	-webkit-background-clip: text; /* для Chrome, Safari */
 	-webkit-text-fill-color: transparent; /* делаем текст прозрачным */
 	background-clip: text; /* для Firefox */
@@ -59,16 +59,19 @@ body {
 	0% {
 		background-position: 0% 50%;
 	}
-	100% {
+	50% {
 		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
 	}
 }
 
 .agree {
 	font-size: 36px;
 	color: #fff;
-  margin-bottom: 10px;
-  margin-top: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 .input_agree {
@@ -92,7 +95,7 @@ body {
 }
 
 .rollton {
-  color: #ffaa00;
+	color: #ffaa00;
 }
 
 /* Стилизованный квадратик */
